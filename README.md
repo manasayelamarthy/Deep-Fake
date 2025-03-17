@@ -48,3 +48,5 @@ We used a **hybrid model** combining a **pre-trained Inception model** (for spat
 - **Batch Size:** 32
 - **Epochs:** 10
 
+## Results
+Accuracy : 0.678
