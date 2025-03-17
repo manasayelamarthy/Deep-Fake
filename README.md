@@ -1,12 +1,12 @@
 # Deep-Fake
 # Deepfake Detection using Inception & GRU
 
-## 📌 Overview
+##  Overview
 This project aims to detect deepfake videos/images using a combination of **Inception-based CNN** for feature extraction and a **GRU (Gated Recurrent Unit) network** for temporal sequence modeling. The dataset used for training is sourced from **Kaggle** and includes real and fake video frames.
 
 ---
 
-## 📂 Dataset
+##  Dataset
 The dataset used for this project was obtained from **Kaggle** and consists of:
 - **Real Images/Videos** (authentic human faces)
 - **Deepfake Images/Videos** (generated using AI-based face manipulation techniques)
@@ -16,14 +16,14 @@ The dataset used for this project was obtained from **Kaggle** and consists of:
 - Images were resized to `299x299` for compatibility with the **Inception model**.
 - The dataset is split into **training (80%) and testing (20%)**.
 
-🔗 **Kaggle Dataset Link:** 
+**Kaggle Dataset Link:** 
 
 ---https://www.kaggle.com/datasets/manasayelamarthy27/deep-fake-dataset
 
-## 🏗 Model Architecture
+##  Model Architecture
 We used a **hybrid model** combining a **pre-trained Inception model** (for spatial feature extraction) and a **GRU network** (for sequence modeling).
 
-### **1️⃣ Inception Model**
+### **1️. Inception Model**
 - **Model Used:** InceptionV3 (pretrained on ImageNet)
 - **Purpose:** Extracts spatial features from input frames.
 - **Modifications:**
@@ -31,7 +31,7 @@ We used a **hybrid model** combining a **pre-trained Inception model** (for spat
   - Extracted high-dimensional feature maps.
   - Passed features to the GRU network.
 
-### **2️⃣ GRU Network**
+### **2️. GRU Network**
 - **Purpose:** Captures temporal dependencies in video sequences.
 - **Architecture:**
   - Input: Extracted features from Inception
@@ -40,12 +40,11 @@ We used a **hybrid model** combining a **pre-trained Inception model** (for spat
 
 ---
 
-## 🏋️ Training Process
+##  Training Process
 - **Loss Function:** Binary Cross-Entropy Loss
 - **Optimizer:** AdamW (with weight decay)
 - **Learning Rate Scheduler:** ReduceLROnPlateau (reduces learning rate if validation accuracy stagnates)
 - **Metrics Used:** Accuracy, Precision, Recall
 - **Batch Size:** 32
 - **Epochs:** 10
-git clone https://github.com/yourusername/deepfake-detection.git
-cd deepfake-detection
+
